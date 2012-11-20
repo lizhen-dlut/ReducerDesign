@@ -1,0 +1,560 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5ABD49EC-AD3D-4822-8B75-B090D6F01B0A}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>SwCSharpAddin1</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SwCSharpAddin1</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <StartProgram>C:\PROGRA~1\SOLIDW~1\\SldWorks.exe</StartProgram>
+    <StartAction>Program</StartAction>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>true</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>true</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.4.369, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\360data\重要数据\我的文档\Visual Studio 2010\Projects\WindowsFormsApplication1\WindowsFormsApplication1\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="SolidWorks.Interop.sldworks">
+      <HintPath>..\..\..\..\Program Files\SolidWorks Corp\SolidWorks\SolidWorks.Interop.sldworks.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="SolidWorks.Interop.swconst">
+      <HintPath>..\..\..\..\Program Files\SolidWorks Corp\SolidWorks\SolidWorks.Interop.swconst.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="SolidWorks.Interop.swpublished">
+      <HintPath>..\..\..\..\Program Files\SolidWorks Corp\SolidWorks\SolidWorks.Interop.swpublished.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="SolidWorksTools">
+      <HintPath>..\..\..\..\..\..\..\PROGRA~1\SOLIDW~1\\SolidWorksTools.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.1.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="ZedGraph, Version=4.9.0.40852, Culture=neutral, PublicKeyToken=02a83cbd123fcd60, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files\zedgraph_dll_v515\zedgraph_dll_v5.1.5\ZedGraph.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonClass\BasicGeraCalculte.cs" />
+    <Compile Include="CommonClass\Bearingcmp.cs" />
+    <Compile Include="CommonClass\BearingReaFor.cs" />
+    <Compile Include="CommonClass\cljbjs.cs" />
+    <Compile Include="CommonClass\Interference.cs" />
+    <Compile Include="CommonClass\InterferenceTolerance.cs" />
+    <Compile Include="CommonClass\ModificationCoefficient.cs" />
+    <Compile Include="CommonClass\ShaftStrength.cs" />
+    <Compile Include="CommonClass\SystemConstants.cs" />
+    <Compile Include="CommonClass\UnZipClass.cs" />
+    <Compile Include="CommonClass\ZipClass.cs" />
+    <Compile Include="EventHandling.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form11.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form11.designer.cs">
+      <DependentUpon>Form11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form19.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form19.designer.cs">
+      <DependentUpon>Form19.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAssemblySketch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAssemblySketch.designer.cs">
+      <DependentUpon>frmAssemblySketch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBearForceAnalysis1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBearForceAnalysis1.designer.cs">
+      <DependentUpon>FrmBearForceAnalysis1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBearForceAnalysis2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBearForceAnalysis2.designer.cs">
+      <DependentUpon>FrmBearForceAnalysis2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBearForceAnalysis3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBearForceAnalysis3.designer.cs">
+      <DependentUpon>FrmBearForceAnalysis3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBearingLife.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBearingLife.designer.cs">
+      <DependentUpon>FrmBearingLife.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDetailDesign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDetailDesign.designer.cs">
+      <DependentUpon>FrmDetailDesign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGearCalculate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGearCalculate.designer.cs">
+      <DependentUpon>frmGearCalculate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGearModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGearModule.designer.cs">
+      <DependentUpon>frmGearModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInterferenceConnection1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInterferenceConnection1.designer.cs">
+      <DependentUpon>FrmInterferenceConnection1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmKeyStrength1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmKeyStrength1.designer.cs">
+      <DependentUpon>FrmKeyStrength1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmModifyGearParameters.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModifyGearParameters.Designer.cs">
+      <DependentUpon>frmModifyGearParameters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmModifyjiancaoParameters.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModifyjiancaoParameters.Designer.cs">
+      <DependentUpon>frmModifyjiancaoParameters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmModifyShaftParameters.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmModifyShaftParameters.Designer.cs">
+      <DependentUpon>FrmModifyShaftParameters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOverallDesign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOverallDesign.designer.cs">
+      <DependentUpon>frmOverallDesign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPicImpactloadFactor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPicImpactloadFactor.designer.cs">
+      <DependentUpon>FrmPicImpactloadFactor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPicInterferenceTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPicInterferenceTable.designer.cs">
+      <DependentUpon>FrmPicInterferenceTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPicTemperatureFactor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPicTemperatureFactor.designer.cs">
+      <DependentUpon>frmPicTemperatureFactor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReducerDesign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReducerDesign.Designer.cs">
+      <DependentUpon>frmReducerDesign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSingleGradeCalculate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSingleGradeCalculate.designer.cs">
+      <DependentUpon>frmSingleGradeCalculate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStrengthCalculation1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStrengthCalculation1.designer.cs">
+      <DependentUpon>FrmStrengthCalculation1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStrengthCalculation2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStrengthCalculation2.designer.cs">
+      <DependentUpon>FrmStrengthCalculation2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStrengthCalculation3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStrengthCalculation3.designer.cs">
+      <DependentUpon>FrmStrengthCalculation3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmToothWidthCoefficient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmToothWidthCoefficient.designer.cs">
+      <DependentUpon>frmToothWidthCoefficient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GearForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GearForm.Designer.cs">
+      <DependentUpon>GearForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KeyStrength4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KeyStrength4.designer.cs">
+      <DependentUpon>KeyStrength4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyPlot.cs" />
+    <Compile Include="PMPHandler.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="SwAddin.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UserPMPage.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form11.resx">
+      <DependentUpon>Form11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form19.resx">
+      <DependentUpon>Form19.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAssemblySketch.resx">
+      <DependentUpon>frmAssemblySketch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBearForceAnalysis1.resx">
+      <DependentUpon>FrmBearForceAnalysis1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBearForceAnalysis2.resx">
+      <DependentUpon>FrmBearForceAnalysis2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBearForceAnalysis3.resx">
+      <DependentUpon>FrmBearForceAnalysis3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBearingLife.resx">
+      <DependentUpon>FrmBearingLife.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDetailDesign.resx">
+      <DependentUpon>FrmDetailDesign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGearCalculate.resx">
+      <DependentUpon>frmGearCalculate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGearModule.resx">
+      <DependentUpon>frmGearModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInterferenceConnection1.resx">
+      <DependentUpon>FrmInterferenceConnection1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmKeyStrength1.resx">
+      <DependentUpon>FrmKeyStrength1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModifyGearParameters.resx">
+      <DependentUpon>frmModifyGearParameters.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModifyjiancaoParameters.resx">
+      <DependentUpon>frmModifyjiancaoParameters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmModifyShaftParameters.resx">
+      <DependentUpon>FrmModifyShaftParameters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOverallDesign.resx">
+      <DependentUpon>frmOverallDesign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPicImpactloadFactor.resx">
+      <DependentUpon>FrmPicImpactloadFactor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPicInterferenceTable.resx">
+      <DependentUpon>FrmPicInterferenceTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPicTemperatureFactor.resx">
+      <DependentUpon>frmPicTemperatureFactor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReducerDesign.resx">
+      <DependentUpon>frmReducerDesign.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSingleGradeCalculate.resx">
+      <DependentUpon>frmSingleGradeCalculate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStrengthCalculation1.resx">
+      <DependentUpon>FrmStrengthCalculation1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStrengthCalculation2.resx">
+      <DependentUpon>FrmStrengthCalculation2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStrengthCalculation3.resx">
+      <DependentUpon>FrmStrengthCalculation3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmToothWidthCoefficient.resx">
+      <DependentUpon>frmToothWidthCoefficient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GearForm.resx">
+      <DependentUpon>GearForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KeyStrength4.resx">
+      <DependentUpon>KeyStrength4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolbarLarge.bmp" />
+    <EmbeddedResource Include="ToolbarSmall.bmp" />
+    <EmbeddedResource Include="MainIconLarge.bmp" />
+    <EmbeddedResource Include="MainIconSmall.bmp" />
+    <EmbeddedResource Include="AddinIcon.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SQL.Server.Compact.3.5">
+      <Visible>False</Visible>
+      <ProductName>SQL Server Compact 3.5 SP2</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\齿轮参数示意图.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shaft_gear.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxEModelView">
+      <Guid>{E992C63C-605A-44F3-BDFF-60A3B18BCC05}</Guid>
+      <VersionMajor>11</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="EModelView">
+      <Guid>{E992C63C-605A-44F3-BDFF-60A3B18BCC05}</Guid>
+      <VersionMajor>11</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+IF EXIST "$(TargetDir)$(TargetName).bmp" (GOTO REGISTRATION)
+XCOPY "$(ProjectDir)AddinIcon.bmp" "$(TargetDir)"  /F
+REN "$(TargetDir)AddinIcon.bmp" "$(TargetName).bmp" 
+
+:REGISTRATION
+IF "$(TargetFrameworkVersion)"=="v4.0" GOTO NET40
+IF "$(TargetFrameworkVersion)"=="v3.5" GOTO NET20
+IF "$(TargetFrameworkVersion)"=="v3.0" GOTO NET20
+IF "$(TargetFrameworkVersion)"=="v2.0" GOTO NET20
+GOTO END
+
+:NET40
+set FMWK="v4.0.30319"
+GOTO REG
+
+:NET20
+set FMWK="v2.0.50727"
+GOTO REG
+
+:REG
+IF "$(PlatformName)" == "AnyCPU" GOTO ANYCPU
+IF "$(PlatformName)" == "x64" GOTO X64
+GOTO END
+
+:ANYCPU
+IF EXIST "%Windir%\Microsoft.NET\Framework64\%FMWK%\regasm.exe" "%Windir%\Microsoft.NET\Framework64\%FMWK%\regasm" /codebase "$(TargetPath)"
+GOTO END
+
+:X64
+IF EXIST "%Windir%\Microsoft.NET\Framework64\%FMWK%\regasm.exe" "%Windir%\Microsoft.NET\Framework64\%FMWK%\regasm" /codebase "$(TargetPath)"
+GOTO END
+
+:END
+    
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

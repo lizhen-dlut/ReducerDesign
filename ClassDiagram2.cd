@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SwCSharpAddin1.DocumentEventHandler" Collapsed="true">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAIAACAAAQAABAAAAIAAAAAAAAgABAAAAI=</HashCode>
+      <FileName>EventHandling.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SwCSharpAddin1.PartEventHandler" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEBAAACAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>EventHandling.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SwCSharpAddin1.AssemblyEventHandler" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEDAAACAAAAAAAAAAAKAAAAAAABAAAAAAAAAAAEAAI=</HashCode>
+      <FileName>EventHandling.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SwCSharpAddin1.DrawingEventHandler" Collapsed="true">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEBAAACAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>EventHandling.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SwCSharpAddin1.DocView" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABgAACAAAAAABAAAAAAAAAAAAAAAIAAAAgABAAAAI=</HashCode>
+      <FileName>EventHandling.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SwCSharpAddin1.Form1" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABEAIIICAkAEgDhACACRQiAAC4BgCYIkRAAAFAAFA=</HashCode>
+      <FileName>Form1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SwCSharpAddin1.frmModifyGearParameters" Collapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>+RIAAAACSCAAABRIABiBAMACOgAgQ1AIACBQkACgAAg=</HashCode>
+      <FileName>frmModifyGearParameters.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SwCSharpAddin1.frmModifyjiancaoParameters" Collapsed="true">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>iQAAEAIBASAQABAAAADAAMACAAAAgEBIEAiQEIAgAAg=</HashCode>
+      <FileName>frmModifyjiancaoParameters.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SwCSharpAddin1.frmModifyShaftParameters" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>oQAAAAACACAAABABAASAAIASBQAAAEIIEAAQMAAgAAw=</HashCode>
+      <FileName>frmModifyShaftParameters.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SwCSharpAddin1.frmReducerDesign" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>//d/O5JAYzCke9ybvXiB/9v/NOi93/9/XPF/r///vb4=</HashCode>
+      <FileName>frmReducerDesign.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SwCSharpAddin1.SolveFun" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>frmReducerDesign.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SwCSharpAddin1.GearForm" Collapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>//m/twIAgjAw2vAZqRjB/MP/IKi/3v9/lXFXj///vT4=</HashCode>
+      <FileName>GearForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SwCSharpAddin1.MainForm" Collapsed="true">
+    <Position X="12.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAiAAAAAAAAGAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MainForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SwCSharpAddin1.MyPlot" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EgAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>MyPlot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SwCSharpAddin1.PMPHandler" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EBJBgAAAgAAAAACIIBFCAEAEigUNQIAEAAIgBBAQIMA=</HashCode>
+      <FileName>PMPHandler.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SwCSharpAddin1.SwAddin" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAICEAQCARAAgAAEBAAASQAhQRACAIAABCgiAgDD04Y=</HashCode>
+      <FileName>SwAddin.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SwCSharpAddin1.UserPMPage" Collapsed="true">
+    <Position X="11" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAEAAAgAAAAIAAAAEAQAAACCAxAEIAAIAHRkIJFAAIA=</HashCode>
+      <FileName>UserPMPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SwCSharpAddin1.Properties.Resources" Collapsed="true">
+    <Position X="11" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAABEAAAAQAAAAAAAAAAAAAAgIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SwCSharpAddin1.Properties.Settings" Collapsed="true">
+    <Position X="12.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAIAAAAAABAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Settings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="SwCSharpAddin1.Parameter" Collapsed="true">
+    <Position X="7.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEACAAAAAAAAAAAAA=</HashCode>
+      <FileName>frmReducerDesign.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Font Name="微软雅黑" Size="9" />
+</ClassDiagram>

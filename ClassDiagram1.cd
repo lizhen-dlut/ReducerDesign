@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SwCSharpAddin1.DocumentEventHandler" Collapsed="true">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAIAACAAAQAABAAAAIAAAAAAAAgABAAAAI=</HashCode>
+      <FileName>EventHandling.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SwCSharpAddin1.PartEventHandler" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAEBAAACAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>EventHandling.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SwCSharpAddin1.AssemblyEventHandler" Collapsed="true">
+    <Position X="5" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAEDAAACAAAAAAAAAAAKAAAAAAABAAAAAAAAAAAEAAI=</HashCode>
+      <FileName>EventHandling.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SwCSharpAddin1.DrawingEventHandler" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAEBAAACAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>EventHandling.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SwCSharpAddin1.DocView" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABgAACAAAAAABAAAAAAAAAAAAAAAIAAAAgABAAAAI=</HashCode>
+      <FileName>EventHandling.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SwCSharpAddin1.PMPHandler" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EBJBgAAAgAAAAACIIBFCAEAEigUNQIAEAAIgBBAQIMA=</HashCode>
+      <FileName>PMPHandler.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SwCSharpAddin1.SwAddin" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6" Y="5" Width="1.5" />
+    <AssociationLine Name="iSwApp" Type="SolidWorks.Interop.sldworks.ISldWorks">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="1.048" Y="-0.242" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>QAICEAQCARAAgAAEBAAASQAhQRACAIAABCgiAgDD04Y=</HashCode>
+      <FileName>SwAddin.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="iSwApp" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.877" />
+  </Class>
+  <Class Name="SwCSharpAddin1.UserPMPage" Collapsed="true">
+    <Position X="10.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAEAAAgAAAAIAAAAEAQAAACCAxAEIAAIAHRkIJFAAIA=</HashCode>
+      <FileName>UserPMPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="SolidWorks.Interop.sldworks.ISldWorks" Collapsed="true">
+    <Position X="8" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="微软雅黑" Size="9" />
+</ClassDiagram>
