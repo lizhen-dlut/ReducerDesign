@@ -280,17 +280,12 @@ namespace ReducerDesign
                 int data;
                 if (int.TryParse(txtDCS.Text, out data))
                 {
-                    txtU.Text = (double.Parse(txtDCS.Text)/double.Parse(txtXCS.Text)).ToString();
+                    txtU.Text = (double.Parse(txtDCS.Text)/double.Parse(txtXCS.Text)).ToString("f4");
                     int z1 = int.Parse(txtXCS.Text);
                     int z2 = int.Parse(txtDCS.Text);
-                    for (int i = 2; i <= z1 - 1; i++)
+                    if (!isRelativelyPrime(z1, z2))
                     {
-                        if (z1%i == 0 & z2%i == 0)
-                        {
-                            MessageBox.Show("z1、z2不是互质数");
-                            txtDCS.Focus();
-                            break;
-                        }
+                        MessageBox.Show("z1、z2不是互质数");
                     }
                 }
                 else
@@ -300,6 +295,20 @@ namespace ReducerDesign
                 }
             }
         }
+
+        private bool  isRelativelyPrime(int z1,int  z2)
+        {
+            for (int i = 2; i <= z1 - 1; i++)
+            {
+                if (z1 % i == 0 & z2 % i == 0)
+                {
+                    return false;
+                    break;
+                }
+            }
+            return true;
+        }
+                
 
         private void txtDCS_Validated(object sender, EventArgs e)
         {

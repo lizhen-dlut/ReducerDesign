@@ -290,6 +290,19 @@ namespace ReducerDesign
 
         }
 
+        private bool isRelativelyPrime(int z1, int z2)
+        {
+            for (int i = 2; i <= z1 - 1; i++)
+            {
+                if (z1 % i == 0 & z2 % i == 0)
+                {
+                    return false;
+                    break;
+                }
+            }
+            return true;
+        }
+
         private void butSystemCalculate_Click(object sender, EventArgs e)
         {
             var gearParameters = new BasicGeraCalculte[_iGrade];
@@ -330,17 +343,21 @@ namespace ReducerDesign
                 dataGridView1[j, 26].Value = gearParameters[i].E.ToString("f5");
             }
 
-            #region 速比误差计算
-
-            double dRatio = 1.0;
-            for (int i = 0; i < gearParameters.Length; i++)
+            for (int i = 0, j = 1; i < _iGrade; i++, j++)
             {
-                dRatio = dRatio * gearParameters[i].Z2 / gearParameters[i].Z1;
+                if (!isRelativelyPrime(int.Parse(s: dataGridView1[j, 2].Value.ToString()), int.Parse(s: dataGridView1[j, 3].Value.ToString())))
+                {
+                    MessageBox.Show("第 " + j + " 级齿轮z1、z2不是互质数");
+                }
             }
 
+            #region 速比误差计算
+
+            double dRatio = gearParameters.Aggregate(1.0, (current, t) => current * t.Z2 / t.Z1);
+
             double dSpeedError = (Math.Abs(double.Parse(SystemConstants.XmlProject.Element("总体要求").Element("总速比").Value) - dRatio)) / double.Parse(SystemConstants.XmlProject.Element("总体要求").Element("总速比").Value);
-            labSpeedC.Text = labSpeedC.Text + "：" + dRatio.ToString("f4");
-            labSpeedError.Text = labSpeedError.Text + "：" + dSpeedError.ToString("f4");
+            labSpeedC.Text = "计算速比：" + dRatio.ToString("f4");
+            labSpeedError.Text = "速比误差：" + dSpeedError.ToString("f4");
 
             SystemConstants.XmlProject.Element("齿轮参数计算").Element("计算速比").Value = dRatio.ToString("f8");
             SystemConstants.XmlProject.Element("齿轮参数计算").Element("速比误差").Value = dSpeedError.ToString("f8");
@@ -349,7 +366,7 @@ namespace ReducerDesign
 
             #region 轴的动力参数计算
 
-            double[,] dDynamicParameters = new double[3, _iGrade + 1];
+            var dDynamicParameters = new double[3, _iGrade + 1];
             dDynamicParameters[0, 0] = Convert.ToDouble(SystemConstants.XmlProject.Element("总体要求").Element("转速").Value);
             dDynamicParameters[1, 0] = Convert.ToDouble(SystemConstants.XmlProject.Element("总体要求").Element("总功率").Value);
             dDynamicParameters[2, 0] = 9550000 * dDynamicParameters[1, 0] / dDynamicParameters[0, 0];
@@ -380,15 +397,49 @@ namespace ReducerDesign
 
             #endregion
 
-            SystemConstants.XmlProject.Save(SystemConstants.StrProjectPath + @"\减速器.xml");
 
+            XElement xe = SystemConstants.XmlProject.Element("齿轮参数计算");
+
+            for (int i = 0, j = 1; i < _iGrade; i++, j++)
+            {
+                xe.Element("第" + j + "级齿轮参数").Element("输入参数").Element("a").Value = dataGridView1[j, 0].Value.ToString();
+                xe.Element("第" + j + "级齿轮参数").Element("输入参数").Element("Mn").Value = dataGridView1[j, 1].Value.ToString();
+                xe.Element("第" + j + "级齿轮参数").Element("输入参数").Element("Z1").Value = dataGridView1[j, 2].Value.ToString();
+                xe.Element("第" + j + "级齿轮参数").Element("输入参数").Element("Z2").Value = dataGridView1[j, 3].Value.ToString();
+                xe.Element("第" + j + "级齿轮参数").Element("输入参数").Element("B1").Value = dataGridView1[j, 4].Value.ToString();
+                xe.Element("第" + j + "级齿轮参数").Element("输入参数").Element("x1").Value = dataGridView1[j, 5].Value.ToString();
+                xe.Element("第" + j + "级齿轮参数").Element("输入参数").Element("alpha").Value = dataGridView1[j, 6].Value.ToString();
+                xe.Element("第" + j + "级齿轮参数").Element("输入参数").Element("ha").Value = dataGridView1[j, 7].Value.ToString();
+                xe.Element("第" + j + "级齿轮参数").Element("输入参数").Element("c").Value = dataGridView1[j, 8].Value.ToString();
+                xe.Element("第" + j + "级齿轮参数").Element("输入参数").Element("B").Value = dataGridView1[j, 9].Value.ToString();
+
+                xe.Element("第" + j + "级齿轮参数").Element("输出参数").Element("x2").Value = dataGridView1[j, 10].Value.ToString();
+                xe.Element("第" + j + "级齿轮参数").Element("输出参数").Element("dyn").Value = dataGridView1[j, 11].Value.ToString();
+                xe.Element("第" + j + "级齿轮参数").Element("输出参数").Element("ha1").Value = dataGridView1[j, 12].Value.ToString();
+                xe.Element("第" + j + "级齿轮参数").Element("输出参数").Element("ha2").Value = dataGridView1[j, 13].Value.ToString();
+                xe.Element("第" + j + "级齿轮参数").Element("输出参数").Element("d1").Value = dataGridView1[j, 14].Value.ToString();
+                xe.Element("第" + j + "级齿轮参数").Element("输出参数").Element("da1").Value = dataGridView1[j, 15].Value.ToString();
+                xe.Element("第" + j + "级齿轮参数").Element("输出参数").Element("df1").Value = dataGridView1[j, 16].Value.ToString();
+                xe.Element("第" + j + "级齿轮参数").Element("输出参数").Element("d2").Value = dataGridView1[j, 17].Value.ToString();
+                xe.Element("第" + j + "级齿轮参数").Element("输出参数").Element("da2").Value = dataGridView1[j, 18].Value.ToString();
+                xe.Element("第" + j + "级齿轮参数").Element("输出参数").Element("df2").Value = dataGridView1[j, 19].Value.ToString();
+                xe.Element("第" + j + "级齿轮参数").Element("输出参数").Element("k1").Value = dataGridView1[j, 20].Value.ToString();
+                xe.Element("第" + j + "级齿轮参数").Element("输出参数").Element("w1").Value = dataGridView1[j, 21].Value.ToString();
+                xe.Element("第" + j + "级齿轮参数").Element("输出参数").Element("k2").Value = dataGridView1[j, 22].Value.ToString();
+                xe.Element("第" + j + "级齿轮参数").Element("输出参数").Element("w2").Value = dataGridView1[j, 23].Value.ToString();
+                xe.Element("第" + j + "级齿轮参数").Element("输出参数").Element("Ea").Value = dataGridView1[j, 24].Value.ToString();
+                xe.Element("第" + j + "级齿轮参数").Element("输出参数").Element("Eb").Value = dataGridView1[j, 25].Value.ToString();
+                xe.Element("第" + j + "级齿轮参数").Element("输出参数").Element("E").Value = dataGridView1[j, 26].Value.ToString();
+            }
+
+            SystemConstants.XmlProject.Save(SystemConstants.StrProjectPath + @"\减速器.xml");
         }
 
         private void butSingleCalculat_Click(object sender, EventArgs e)
         {
             SystemConstants.SingleCalcultGrade = (int)numericUpDown1.Value;
 
-            FrmSingleGradeCalculate childFrame = new FrmSingleGradeCalculate();
+            var childFrame = new FrmSingleGradeCalculate();
             childFrame.Show();
             this.Close();
         }
